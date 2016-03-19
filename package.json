@@ -1,0 +1,25 @@
+{
+  "name": "mv-browserify",
+  "version": "0.0.1",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify src/app.js -o public/js/app.js -d",
+    "build:production": "browserify src/app.js | uglifyjs -c -m > public/js/app.js",
+    "build:watch": "watchify src/app.js -o public/js/app.js -d -v",
+    "clean": "rm -r public/js",
+    "prebuild": "mkdir -p public/js"
+  },
+  "author": "Linus Miller <lohfu@lohfu.io> (https://lohfu.io)",
+  "license": "MIT",
+  "dependencies": {
+    "hirestime": "^1.0.7",
+    "node-static": "^0.7.7"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "uglify-js": "^2.6.2",
+    "watchify": "^3.7.0"
+  }
+}

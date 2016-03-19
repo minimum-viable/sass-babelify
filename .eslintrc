@@ -1,0 +1,17 @@
+{
+	"extends": "airbnb/legacy",
+	"globals": {
+		"PWD": true,
+		"ENV": true
+	},
+	"rules": {
+		"no-console": "off",
+		"func-names": "off",
+		"array-bracket-spacing": "off",
+		"indent": [ 2, "tab" ],
+		"comma-dangle": "off",
+		"prefer-template": "off",
+		"curly": "off",
+		"no-param-reassign": "off"
+	}
+}
