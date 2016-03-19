@@ -1,5 +1,5 @@
 {
-	"extends": "airbnb/legacy",
+	"extends": "airbnb",
 	"globals": {
 		"PWD": true,
 		"ENV": true

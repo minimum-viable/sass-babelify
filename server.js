@@ -1,13 +1,13 @@
-var colors = require('colors/safe');
-var hirestime = require('hirestime');
-var serveStatic = new (require('node-static').Server)('./public');
+const colors = require('colors/safe');
+const hirestime = require('hirestime');
+const serveStatic = new (require('node-static').Server)('./public');
 
-require('http').createServer(function (request, response) {
-	request.on('end', function () {
-		var timer = hirestime();
+require('http').createServer((request, response) => {
+	request.on('end', () => {
+		const timer = hirestime();
 
-		response.on('finish', function () {
-			var statusCode = response.statusCode;
+		response.on('finish', () => {
+			let statusCode = response.statusCode;
 
 			if (statusCode < 300)
 				statusCode = colors.green(statusCode);
