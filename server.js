@@ -1,6 +1,10 @@
+'use strict';
+
 const colors = require('colors/safe');
 const hirestime = require('hirestime');
 const serveStatic = new (require('node-static').Server)('./public');
+
+const port = 8080;
 
 require('http').createServer((request, response) => {
 	request.on('end', () => {
@@ -21,4 +25,4 @@ require('http').createServer((request, response) => {
 
 		serveStatic.serve(request, response);
 	}).resume();
-}).listen(8080);
+}).listen(port, () => console.log('Server listening on port ' + port));

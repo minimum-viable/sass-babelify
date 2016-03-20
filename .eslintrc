@@ -1,10 +1,17 @@
 {
 	"extends": "airbnb",
+
 	"globals": {
 		"PWD": true,
 		"ENV": true
 	},
+
+	"parserOptions": {
+		"sourceType": "strict"
+	},
+
 	"rules": {
+		"strict": [ 2, "global" ],
 		"no-console": "off",
 		"func-names": "off",
 		"array-bracket-spacing": "off",
