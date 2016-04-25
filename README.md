@@ -1,11 +1,11 @@
 # browserify
 
-Mininum viable setup to get Browserify running.
+Mininum viable setup to get Node Sass & Browserify with Babelify running.
 
 ## Use
 
 ```
-git clone git@github.com:mininum-viable/browserify.git
+git clone git@github.com:mininum-viable/sass-babelify.git
 ```
 
 ```
@@ -16,7 +16,10 @@ To build the project, simply run one of the following
 
 ```
 npm run build
-npm run build:watch
+npm run build:js
+npm run build:js:watch
+npm run build:sass
+npm run build:sass:watch
 npm run build:production
 ```
 
